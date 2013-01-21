@@ -1,8 +1,21 @@
 Coach::Application.routes.draw do
+  devise_for :users
+
   resources :donates
-
-
-  resources :users
+  resources :users 
+  
+  SitesController.action_methods.each do |action|
+    get "/#{action}", to: "sites##{action}", as: "#{action}_site"
+  end
+  
+  resources :sites, :except => [:index, :show]
+  
+  # get "/portfolio", to: "sites#portfolio", as: :portfolio_page
+  # get "/contact", to: "sites#contact", as: :contact_page
+  
+  
+  
+  root :to => 'users#index'
 
 
   # The priority is based upon order of creation:
@@ -54,7 +67,7 @@ Coach::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'users#index'
+
 
   # See how all your routes lay out with "rake routes"
 

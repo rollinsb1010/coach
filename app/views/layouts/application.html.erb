@@ -1,12 +1,53 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
 <html>
 <head>
-  <title>Coach</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
+  
+  <meta name="description" content="...">
+  <meta name="keywords" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+  <link href="http://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet" type="text/css">
+  
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+</head>  
+<body>	
+
+	<!-- Header -->
+  <header id="header">
+    <hr class="hr_t">
+
+		<nav class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+        <!-- Logo -->
+        <a class="logo" href="index.html"><img src="app/assets/images/Homeless_logo.jpg" title="Homeless Coach" alt="Logo"></a>
+          <!-- Menu -->
+					<ul class="nav">
+						<li><%= link_to 'Home', users_path %></li>
+    					<li><%= link_to 'About', about_site_path %></li>
+    					<li><%= link_to 'Donate', donates_path %></li>
+    					<li><%= link_to 'Video', portfolio_site_path %></li>
+						<li><%= link_to 'Contact', contact_site_path %></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+                        
+  </header>
+ 
+
+
 
 <%= yield %>
 
