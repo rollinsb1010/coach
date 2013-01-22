@@ -10,10 +10,10 @@
         <div class="row">
           <div class="span12">
             <!-- Page Title -->
-            <h1>Portfolio</h1>
+            <h1>Meet Our Heroes</h1>
             <hr>
               <!-- Page Subtitle -->
-              <h2>We’re committed to finding creative solutions for our clients and creating beautiful interfaces along the way.</h2>
+              <h2>Those that are committed to sticking together and overcoming, what most of us would view as, insurmountable odds.</h2>
             <hr>
           </div>
         </div>  
@@ -26,11 +26,11 @@
     
       		<!-- portfolio filter -->		
       		<ul id="portfolio-filter">
-      			<li class="active"><a href="#" class="filter" data-filter="*">All</a></li>
-      			<li><a href="#" class="filter" data-filter=".hr">Human Resource</a></li>
-            <li><a href="#" class="filter" data-filter=".marketing">Marketing</a></li>
-      			<li><a href="#" class="filter" data-filter=".ls">Leadership</a></li>
-            <li><a href="#" class="filter" data-filter=".innovation">Innovations</a></li>
+      			<li class="active"><a href="#" class="filter" data-filter="*">The Hoffmans</a></li>
+      			<li><a href="#" class="filter" data-filter=".hr">Hero2</a></li>
+            <li><a href="#" class="filter" data-filter=".marketing">Hero3</a></li>
+      			<li><a href="#" class="filter" data-filter=".ls">Hero4</a></li>
+            <li><a href="#" class="filter" data-filter=".innovation">Hero5</a></li>
       		</ul>
     
         </div>
@@ -48,11 +48,24 @@
               <article class="span4 project" data-tags="ls,marketing">
         				<div class="thumbnail">
         					<a href="portfolio-detail.html" title="">
-                    <%= image_tag "portfolio/01.jpg" %>
+                    <%= image_tag "12.jpg" %>
                     <div class="overlay">
                       <div class=" overlay-content">
-                       <div class="title">Business workflow<br>for year 2012</div>
-                       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                       <div class="title"><h2>The Hoffman Dozen</h2></div><br /><br />
+                       <p>The Hoffman family has known much better times. Times when income was good and life afforded father Daniel
+time to play soccer with their eight children (two more were born since then), volunteer with local schools to shield
+their computer networks from adult content and mother Buffie time to volunteer as a breastfeeding instructor. Since
+August, 2009 however, the Hoffmans began spiraling into homelessness.<br /><br /> This downward spiral was initiated when
+the company they both worked for began to struggle and hedge on paying its employees. Before long the then family
+of ten struggled to pay rent and bills piled up while Daniel sought but couldn't secure steady employment. Discouraged by
+the job prospects in Wisconsin, they eventually packed all belongings into a U-Haul and trucked to Granbury, Texas.
+Friends had spoken of available jobs and housing, alas, neither materialized as hoped. Resourcefully, they began to find a
+combination of work and shelter by offering to upgrade wifi and website systems for motels in exchange for pay and shelter.
+This succeeded until the their third customer began accusing them of exorbitant water use and threats of eviction.<br /><br />
+That's when the Hoffmans contacted the Homeless Coach for help in reversing homelessness and, most importantly,
+keeping a loving, close-knit family together. Meanwhile finger pointing at the motel, led to court appearances and eventually a
+ruling to vacate the premises. Shortly thereafter, the Hoffmans found themselves in Austin where they
+have been journeying off the streets with the help and support of the local Austin and global web communities.</p>
                       </div>
                     </div>
                   </a>
@@ -304,12 +317,10 @@
             <!-- Get Social -->
             <div class="footer-title">GET SOCIAL</div>
     					<p>  
-                <a href="http://www.facebook.com" rel="external" class="social-network facebook"></a>
-    						<a href="http://www.twitter.com" rel="external" class="social-network twitter"></a>
-                <a href="http://www.dribbble.com" rel="external" class="social-network dribbble"></a>
-    						<a href="http://www.pinterest.com" rel="external" class="social-network pinterest"></a>
-    						<a href="http://www.deviantart.com" rel="external" class="social-network deviantart"></a>
-                <a href="http://www.lastfm.com" rel="external" class="social-network lastfm"></a>
+               <%= link_to "http://www.facebook.com", :class => "social-network facebook" %>
+                <%= link_to "http://www.dribble.com", :class => "social-network dribble" %>
+                <%= link_to "http://www.pinterest.com", :class => "social-network pinterest" %>
+                <%= link_to "http://www.deviantart.com", :class => "social-network deviantart" %>
     					</p>
             <!-- Newsletter -->
             <div class="footer-title">NEWSLETTER</div>
