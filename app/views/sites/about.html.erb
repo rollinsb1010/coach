@@ -2,6 +2,9 @@
   	
   
   <html>
+  	<!-- <head>
+  		<%= stylesheet_link_tag "font-awesome" %>
+  	</head>	 -->
  
   <!-- Content -->
   <body>
@@ -14,7 +17,7 @@
             <h1>About us</h1>
             <hr>
               <!-- Page Subtitle -->
-              <h2>We’re committed to finding creative solutions for our clients and creating beautiful interfaces along the way.</h2>
+              <h2>Homelessness is a very serious problem in the Austin area, but we're committed to doing our part to help change that.  We're committed to changing lives for the better, to ending homelessness in our community one “Heroes’ journey” at a time</h2>
             <hr>        
           </div>
         </div>  
@@ -77,16 +80,16 @@
     <div class="container"> 
       <div class="row lh-1">
         <div class="span4">
-          <h3>Goal Setting</h3>
-          <p>Claritas est etiam processus dynamicus, equitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula uarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+          <h3>Mission Statement</h3>
+          <p>ssensselemoH -- reverse Homelessness – that's the stated mission of the Homeless Coach.</p>
         </div>  
         <div class="span4">
-          <h3>How We Think</h3>
-          <p>Claritas est etiam processus dynamicus, equitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula uarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+          <h3>How do we ssensselemoH?</h3>
+          <p>In a laid-back atmosphere of fun and fellowship – and delicious Austin original cuisine, the Homeless Coach connects homeless “heroes” determined to get off the streets with members of the local community in special coaching sessions videotaped and streamed live to the Internet.</p>
         </div>  
         <div class="span4">
-          <h3>We Give Guarantee</h3>
-          <p>Claritas est etiam processus dynamicus, equitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula uarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+          <h3>Methodology</h3>
+          <p>The goal is to enable community-based networking and relationship building that lifts and sustains    them off the streets, into shelters and on the path to meaningful, purpose-filled lives where they can effectively use their gifts and skills as proud contributors to society.</p>
         </div>  
       </div> 
     </div> 
@@ -100,7 +103,7 @@
       </div>  
       <div class="row">
         <div class="span8">
-          <div class="more-info">Need more info? Call Us <span class="gray">+558 456 789</span></div>
+          <div class="more-info">The Homeless Coach is committed to reversing homelessness in our community, but we can't do it alone.  We need the help of generous, compassionate people like you!<span class="gray">'Contact Info'</span></div>
         </div>
         <div class="span4 right">
           <a href="#"><div class="button-class but-1">Contact Us »</div></a>
@@ -120,7 +123,7 @@
               <!-- Member -->
               <div class="span4 team-container">
                 <div class="member-photo">
-                  <img src="img/our-team/140x140-1.jpg" alt="">
+                  <%= image_tag "our-team/140x140-1.jpg" %>
                   <div class="circle-mask-1"></div>
                 </div> 
                 <div class="member-data">
@@ -132,7 +135,7 @@
               <!-- Member --> 
               <div class="span4 team-container"> 
                 <div class="member-photo">
-                  <img src="img/our-team/140x140-2.jpg" alt="">
+                  <%= image_tag "our-team/140x140-2.jpg" %>
                   <div class="circle-mask-1"></div>
                 </div> 
                 <div class="member-data">
@@ -144,7 +147,7 @@
               <!-- Member -->  
               <div class="span4 team-container">  
                 <div class="member-photo">
-                  <img src="img/our-team/140x140-3.jpg" alt="">
+                  <%= image_tag "our-team/140x140-3.jpg" %>
                   <div class="circle-mask-1"></div>
                 </div> 
                 <div class="member-data">
@@ -164,7 +167,7 @@
               <!-- Member -->
               <div class="span4 team-container">
                 <div class="member-photo">
-                  <img src="img/our-team/140x140-4.jpg" alt="">
+                  <%= image_tag "our-team/140x140-4.jpg" %>
                   <div class="circle-mask-1"></div>
                 </div> 
                 <div class="member-data">
@@ -176,7 +179,7 @@
               <!-- Member -->   
               <div class="span4 team-container"> 
                 <div class="member-photo">
-                    <img src="img/our-team/140x140-5.jpg" alt="">
+                    <%= image_tag "our-team/140x140-5.jpg" %>
                     <div class="circle-mask-1"></div>
                 </div> 
                 <div class="member-data">
@@ -188,7 +191,7 @@
               <!-- Member -->  
               <div class="span4 team-container">  
                 <div class="member-photo">
-                  <img src="img/our-team/140x140-6.jpg" alt="">
+                  <%= image_tag "our-team/140x140-6.jpg" %>
                   <div class="circle-mask-1"></div>
                 </div> 
                 <div class="member-data">
@@ -219,22 +222,22 @@
       </div>
       <div class="row partners">
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-1.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-1.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-2.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-2.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-3.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-3.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-4.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-4.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-5.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-5.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-6.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-6.png" %></a>
         </div>
       </div>   
     </div>
@@ -268,17 +271,15 @@
             <!-- Get Social -->
             <div class="footer-title">GET SOCIAL</div>
     					<p>  
-                <a href="http://www.facebook.com" rel="external" class="social-network facebook"></a>
-    						<a href="http://www.twitter.com" rel="external" class="social-network twitter"></a>
-                <a href="http://www.dribbble.com" rel="external" class="social-network dribbble"></a>
-    						<a href="http://www.pinterest.com" rel="external" class="social-network pinterest"></a>
-    						<a href="http://www.deviantart.com" rel="external" class="social-network deviantart"></a>
-                <a href="http://www.lastfm.com" rel="external" class="social-network lastfm"></a>
+               <%= link_to "http://www.facebook.com", :class => "social-network facebook" %>
+                <%= link_to "http://www.dribble.com", :class => "social-network dribble" %>
+                <%= link_to "http://www.pinterest.com", :class => "social-network pinterest" %>
+                <%= link_to "http://www.deviantart.com", :class => "social-network deviantart" %>
     					</p>
             <!-- Newsletter -->
             <div class="footer-title">NEWSLETTER</div>
             <div class="newsletter-container">
-              <img class="ajax-loader" src="img/ajax-loader.gif" alt="">
+              <%= image_tag "ajax-loader.gif", :class => "ajax-loader" %>
               <form method="post" id="newsletter-f">             
                 <input type="text" name="newsletter" placeholder="Your e-mail address">
                 <button type="submit" id="newsletter-subscribe" class="icon-ok"></button>
@@ -296,11 +297,14 @@
     <div class="container">   
       <div class="row">
         <div class="span1">    
-          <a href="#"><img src="img/logo-footer.png" title="" alt=""></a>
+          <a href="#"><%= image_tag "logo-footer.png" %></a>
         </div>
         <div class="span7">
-          Glasgow, United Kingdom<br>
-          E-mail: <a href="mailto:mail@tracedomain.com" class="blue" rel="external">mail@tracedomain.com</a> | Phone: <span class="blue">1-800-555-1111</span>
+
+          Austin, TX<br>
+
+          E-mail: <a href="mailto:homelesscoach@domain.com" class="blue" rel="external">homelesscoach@domain.com</a> | Phone: <span class="blue">1-800-555-1111</span>
+
         </div>
         <div class="span4 right">
           &copy; 2012 trace. All rights reserved. Designed by <a href="http://www.entiri.com" class="white" rel="external">entiri</a><br>

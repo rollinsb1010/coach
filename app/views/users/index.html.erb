@@ -15,21 +15,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <![endif]--> 
 
-  <!-- Favicon -->
-  <link href="img/favicon.png" rel="icon" type="image/png">
-
-  <!-- Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-
-  <!-- Font Avesome Styles -->
-  <link href="css/font-awesome/font-awesome.css" rel="stylesheet">
-	<!--[if IE 7]>
-		<link href="css/font-awesome/font-awesome-ie7.css" rel="stylesheet">
-	<![endif]-->
-
-  <!-- FlexSlider Style -->
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
-
+ 
   <!-- Web Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
   <link href="http://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet" type="text/css">
@@ -52,16 +38,16 @@
               <div class="flexslider">
                 <ul class="slides">
                   <li>
-        	    	    <img src="img/slider/banner-1.jpg" alt="">
+        	    	    <%= image_tag "slider/banner-1.jpg" %>
         	    		</li>
         	    		<li>
-        	    	    <img src="img/slider/banner-2.jpg" alt="">
+        	    	    <%= image_tag "slider/banner-2.jpg" %>
         	    		</li>
         	    		<li>
-        	    	    <img src="img/slider/banner-3.jpg" alt="">
+        	    	    <%= image_tag "slider/banner-3.jpg" %>
         	    		</li>
         	    		<li>
-        	    	    <img src="img/slider/banner-4.jpg" alt="">
+        	    	    <%= image_tag "slider/banner-4.jpg" %>
         	    		</li>
                 </ul>
               </div>          
@@ -131,7 +117,7 @@
         <div class="row">
           <div class="span4">
             <div class="square">
-              <img src="img/home/300x244-1.jpg" title="" alt="">
+            	<%= image_tag "home/300x244-1.jpg" %>
                 <div class="square-title">
                   <div class="square-title-children">
                     Bussiness workflow for<br>year 2012
@@ -148,7 +134,7 @@
           </div>      
           <div class="span4">
             <div class="square">
-              <img src="img/home/300x244-2.jpg" title="" alt="">
+            	<%= image_tag "home/300x244-2.jpg" %>
               <div class="square-title">
                 <div class="square-title-children">
                   Cooperation projects<br />with the agencies
@@ -165,7 +151,7 @@
           </div>
           <div class="span4">
             <div class="square">
-              <img src="img/home/300x244-3.jpg" title="" alt="">
+              <%= image_tag "home/300x244-3.jpg" %>
               <div class="square-title">
                 <div class="square-title-children">
                    We are creative team
@@ -198,22 +184,22 @@
       </div>
       <div class="row partners">
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-1.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-1.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-2.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-2.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-3.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-3.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-4.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-4.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-5.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-5.png" %></a>
         </div>
         <div class="span2 center">
-          <a href="#" rel="external"><img src="img/partners/logo-6.png" alt=""></a>
+          <a href="#" rel="external"><%= image_tag "partners/logo-6.png" %></a>
         </div>
       </div>   
     </div>
@@ -247,17 +233,15 @@
             <!-- Get Social -->
             <div class="footer-title">GET SOCIAL</div>
     					<p>  
-                <a href="http://www.facebook.com" rel="external" class="social-network facebook"></a>
-    						<a href="http://www.twitter.com" rel="external" class="social-network twitter"></a>
-                <a href="http://www.dribbble.com" rel="external" class="social-network dribbble"></a>
-    						<a href="http://www.pinterest.com" rel="external" class="social-network pinterest"></a>
-    						<a href="http://www.deviantart.com" rel="external" class="social-network deviantart"></a>
-                <a href="http://www.lastfm.com" rel="external" class="social-network lastfm"></a>
+               <%= link_to "http://www.facebook.com", :class => "social-network facebook" %>
+                <%= link_to "http://www.dribble.com", :class => "social-network dribble" %>
+                <%= link_to "http://www.pinterest.com", :class => "social-network pinterest" %>
+                <%= link_to "http://www.deviantart.com", :class => "social-network deviantart" %>
     					</p>
             <!-- Newsletter -->
             <div class="footer-title">NEWSLETTER</div>
             <div class="newsletter-container">
-              <img class="ajax-loader" src="img/ajax-loader.gif" alt="">
+              <%= image_tag "ajax-loader.gif", :class => "ajax-loader" %>
               <form method="post" id="newsletter-f">             
                 <input type="text" name="newsletter" placeholder="Your e-mail address">
                 <button type="submit" id="newsletter-subscribe" class="icon-ok"></button>
@@ -275,11 +259,14 @@
     <div class="container">   
       <div class="row">
         <div class="span1">    
-          <a href="#"><img src="img/logo-footer.png" title="" alt=""></a>
+          <a href="#"><%= image_tag "logo-footer.png" %></a>
         </div>
         <div class="span7">
-          Glasgow, United Kingdom<br>
-          E-mail: <a href="mailto:mail@tracedomain.com" class="blue" rel="external">mail@tracedomain.com</a> | Phone: <span class="blue">1-800-555-1111</span>
+
+          Austin, TX<br>
+
+          E-mail: <a href="mailto:homelesscoach@domain.com" class="blue" rel="external">homelesscoach@domain.com</a> | Phone: <span class="blue">1-800-555-1111</span>
+
         </div>
         <div class="span4 right">
           &copy; 2012 trace. All rights reserved. Designed by <a href="http://www.entiri.com" class="white" rel="external">entiri</a><br>
@@ -294,11 +281,7 @@
   <!-- End Footer -->
 
   <!-- Javascript -->
-  <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>  
-	<script type="text/javascript" src="js/functions.js"></script>
-	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-  <script type="text/javascript" defer src="js/jquery.flexslider.js"></script>
+  
 
 </body>
 </html>

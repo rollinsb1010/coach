@@ -31,12 +31,12 @@
 			<div class="navbar-inner">
 				<div class="container">
         <!-- Logo -->
-        <a class="logo" href="index.html"><img src="app/assets/images/Homeless_logo.jpg" title="Homeless Coach" alt="Logo"></a>
+        <%= link_to image_tag('Homeless_logo.jpg'), 'http://www.google.com' %>
           <!-- Menu -->
 					<ul class="nav">
 						<li><%= link_to 'Home', users_path %></li>
     					<li><%= link_to 'About', about_site_path %></li>
-    					<li><%= link_to 'Donate', donates_path %></li>
+    					<li><%= link_to 'Support', donates_path %></li>
     					<li><%= link_to 'Video', portfolio_site_path %></li>
 						<li><%= link_to 'Contact', contact_site_path %></li>
 					</ul>
