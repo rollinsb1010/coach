@@ -51,6 +51,8 @@ GEM
       multi_json (~> 1.0)
     font-awesome-rails (3.0.2.0)
       railties (>= 3.1)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -122,6 +124,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   font-awesome-rails
+  formtastic
   jquery-rails
   pg
   rails (= 3.2.9)

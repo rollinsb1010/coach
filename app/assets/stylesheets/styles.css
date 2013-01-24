@@ -317,6 +317,17 @@ h2 a, h3 a, h2 a:hover, h3 a:hover {
 	padding-top:20px;
 }
 
+#jobs-left {
+	text-align:left;
+	/*vertical-align:top;*/
+}
+
+#jobs-right{
+	float:right;
+	/*vertical-align:top;*/
+}
+
+
 
 
 
