@@ -318,16 +318,64 @@ h2 a, h3 a, h2 a:hover, h3 a:hover {
 }
 
 #jobs-left {
+	float:left;
 	text-align:left;
+	width:50%;
+	overflow:hidden;
+	position:relative;
+	
 	/*vertical-align:top;*/
 }
 
 #jobs-right{
-	float:right;
+	float:left;
+	text-align:left;
+	width:50%;
+	overflow:hidden;
+	position:relative;
 	/*vertical-align:top;*/
 }
 
+#jobs-table{
+	width:100%;
+}
 
+#volunteers{
+	font-size:16px;
+}
+
+.press-image1,
+.press-image2,
+.press-image3,
+.press-image4
+{
+	/*width:150px;*/
+	height:300px;
+	width:25%;
+	float:left;
+	padding:10px;
+	position:relative;
+}
+
+.press-table{
+	width:100%;
+	height:600px;
+	padding-bottom:30px
+	
+}
+
+.social-icons-img{
+	width:30px;
+	height:30px;
+	padding:5px;
+	position:relative;
+}
+
+.social-icons{
+	width:200px;
+	float:right;
+	height:50px;
+}
 
 
 
