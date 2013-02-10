@@ -1,4 +1,5 @@
 Coach::Application.routes.draw do
+
   devise_for :users
 
   resources :donates
@@ -9,6 +10,7 @@ Coach::Application.routes.draw do
   end
   
   resources :sites, :except => [:index, :show]
+  resources :messages
   
   # get "/portfolio", to: "sites#portfolio", as: :portfolio_page
   # get "/contact", to: "sites#contact", as: :contact_page

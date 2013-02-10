@@ -1,0 +1,16 @@
+$("#chat").append("<%= j render(@message) %>");
+	$("#new_message")[0].reset();
+
+$("#chat").scroll(function(){
+	$(this).css("display", "inline");
+});
+
+$(document).ready(function(){
+	$("#chat").click(function(){
+	$(this).resizable();
+});
+	});
+
+<!-- $("#chat").append("<%= escape_javascript render(@message) %>");
+$("#new_message")[0].reset(); -->
+
