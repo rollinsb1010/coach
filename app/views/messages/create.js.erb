@@ -1,15 +1,19 @@
-$("#chat").append("<%= j render(@message) %>");
-	$("#new_message")[0].reset();
+<% publish_to "/messages/new" do %>
+	$("#chat").append("<%= j render(@message) %>");
+	$("#chat").animate({ scrollTop: $("#chat").height() }, "fast");		
+<% end %>
+
+$("#new_message")[0].reset();
 
 $("#chat").scroll(function(){
 	$(this).css("display", "inline");
-});
+}); 
 
-$(document).ready(function(){
+<!-- $(document).ready(function(){
 	$("#chat").click(function(){
 	$(this).resizable();
 });
-	});
+	});  -->
 
 <!-- $("#chat").append("<%= escape_javascript render(@message) %>");
 $("#new_message")[0].reset(); -->
