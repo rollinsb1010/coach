@@ -54,6 +54,19 @@ class MessagesController < ApplicationController
   # # POST /messages.json
   def create
     @message = Message.create!(params[:message])
+    auth_hash = request.env['omniauth.auth']
+    # render :text => auth_hash.inspect
+    @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
+      if @authorization
+        render :text => "Welcome back #{@authorization.chat_user.name}! You have already signed up."
+      else
+    chat_user = Chat_User.new :name => auth_hash["chat_user_info"]["name"], :email => auth_hash["chat_user_info"]["email"]
+    chat_user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
+    chat_user.save
+    render :text => "Hi #{chat_user.name}! You've signed up."
+  end
+end
+   
 
     # respond_to do |format|
       # if @message.save
@@ -64,6 +77,9 @@ class MessagesController < ApplicationController
         # format.json { render json: @message.errors, status: :unprocessable_entity }
       # end
     # end
+ 
+  
+  def failure
   end
 # 
   # # PUT /messages/1

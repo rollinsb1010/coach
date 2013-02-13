@@ -10,7 +10,11 @@ Coach::Application.routes.draw do
   end
   
   resources :sites, :except => [:index, :show]
-  resources :messages
+  resources :messages, :except => [:create, :new]
+  
+  get '/login', :to => 'messages#new', :as => :login
+  match '/auth/:provider/callback', :to => 'messages#create'
+  match '/auth/failure', :to => 'messages#failure'
   
   # get "/portfolio", to: "sites#portfolio", as: :portfolio_page
   # get "/contact", to: "sites#contact", as: :contact_page
