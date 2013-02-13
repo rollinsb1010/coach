@@ -60,7 +60,7 @@ class MessagesController < ApplicationController
       if @authorization
         render :text => "Welcome back #{@authorization.chat_user.name}! You have already signed up."
       else
-    chat_user = Chat_User.new :name => auth_hash["chat_user_info"]["name"], :email => auth_hash["chat_user_info"]["email"]
+    chat_user = ChatUser.new :name => auth_hash["info"]["name"], :email => auth_hash["info"]["email"]
     chat_user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
     chat_user.save
     render :text => "Hi #{chat_user.name}! You've signed up."

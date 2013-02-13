@@ -176,7 +176,7 @@ DEPENDENCIES
   font-awesome-rails
   formtastic
   jquery-rails
-  omniauth-facebook (= 1.4.0)
+  omniauth-facebook
   pg
   private_pub
   rails (= 3.2.9)
