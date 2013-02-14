@@ -16,6 +16,10 @@ Coach::Application.routes.draw do
   match '/auth/:provider/callback', :to => 'messages#create'
   match '/auth/failure', :to => 'messages#failure'
   
+  
+  
+  get '/logout', :to => 'messages#destroy'
+  
   # get "/portfolio", to: "sites#portfolio", as: :portfolio_page
   # get "/contact", to: "sites#contact", as: :contact_page
   

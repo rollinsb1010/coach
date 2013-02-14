@@ -55,19 +55,35 @@ class MessagesController < ApplicationController
   def create
     @message = Message.create!(params[:message])
     auth_hash = request.env['omniauth.auth']
-    # render :text => auth_hash.inspect
-    @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
-      if @authorization
-        render :text => "Welcome back #{@authorization.chat_user.name}! You have already signed up."
-      else
-    chat_user = ChatUser.new :name => auth_hash["info"]["name"], :email => auth_hash["info"]["email"]
-    chat_user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
-    chat_user.save
-    render :text => "Hi #{chat_user.name}! You've signed up."
+       if message[:chat_user_id]
+         ChatUser.find(message[:chat_user_id]).add_provider(auth_hash)
+         render :text => "You can now login using #{auth_hash["provider"].capitalize} too!"
+       else 
+         auth_hash = request.env['omniauth.auth'] 
+         auth = Authorization.find_or_create(auth_hash)
+         message[:chat_user_id] = auth.user.id
+         render :text => "Welcome #{auth.user.name}!" 
+       end
   end
-end
+     
+    # render :text => auth_hash.inspect
+    # @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
+      # if @authorization
+        # render :text => "Welcome back #{@authorization.chat_user.name}! You have already signed up."
+      # else
+    # chat_user = ChatUser.new :name => auth_hash["info"]["name"], :email => auth_hash["info"]["email"]
+    # chat_user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
+    # chat_user.save
+    # render :text => "Hi #{chat_user.name}! You've signed up."
+  
    
 
+ 
+    # Means our user is signed in. Add the authorization to the user
+    
+
+    # Log him in or sign him up
+   
     # respond_to do |format|
       # if @message.save
         # format.html { redirect_to @message, notice: 'Message was successfully created.' }
@@ -80,6 +96,12 @@ end
  
   
   def failure
+    render :text => "Sorry, but you didn't allow access to our app!"
+  end
+  
+  def destroy
+    message[:chat_user_id] = nil
+    render :text => "You've logged out!"
   end
 # 
   # # PUT /messages/1
