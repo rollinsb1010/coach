@@ -176,6 +176,7 @@ DEPENDENCIES
   font-awesome-rails
   formtastic
   jquery-rails
+  omniauth
   omniauth-facebook
   pg
   private_pub

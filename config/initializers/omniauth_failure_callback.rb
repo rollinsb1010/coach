@@ -1,1 +1,1 @@
-OmniAuth.config.on_failure = MessagesController.action(:failure)
+# OmniAuth.config.on_failure = MessagesController.action(:failure)

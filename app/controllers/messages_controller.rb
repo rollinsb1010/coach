@@ -54,16 +54,16 @@ class MessagesController < ApplicationController
   # # POST /messages.json
   def create
     @message = Message.create!(params[:message])
-    auth_hash = request.env['omniauth.auth']
-       if message[:chat_user_id]
-         ChatUser.find(message[:chat_user_id]).add_provider(auth_hash)
-         render :text => "You can now login using #{auth_hash["provider"].capitalize} too!"
-       else 
-         auth_hash = request.env['omniauth.auth'] 
-         auth = Authorization.find_or_create(auth_hash)
-         message[:chat_user_id] = auth.user.id
-         render :text => "Welcome #{auth.user.name}!" 
-       end
+    # auth_hash = request.env['omniauth.auth']
+       # if message[:chat_user_id]
+         # ChatUser.find(message[:chat_user_id]).add_provider(auth_hash)
+         # render :text => "You can now login using #{auth_hash["provider"].capitalize} too!"
+       # else 
+         # auth_hash = request.env['omniauth.auth'] 
+         # auth = Authorization.find_or_create(auth_hash)
+         # message[:chat_user_id] = auth.user.id
+         # render :text => "Welcome #{auth.user.name}!" 
+       # end
   end
      
     # render :text => auth_hash.inspect
@@ -95,14 +95,14 @@ class MessagesController < ApplicationController
     # end
  
   
-  def failure
-    render :text => "Sorry, but you didn't allow access to our app!"
-  end
-  
-  def destroy
-    message[:chat_user_id] = nil
-    render :text => "You've logged out!"
-  end
+  # def failure
+    # render :text => "Sorry, but you didn't allow access to our app!"
+  # end
+#   
+  # def destroy
+    # message[:chat_user_id] = nil
+    # render :text => "You've logged out!"
+  # end
 # 
   # # PUT /messages/1
   # # PUT /messages/1.json

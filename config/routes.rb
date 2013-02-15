@@ -1,6 +1,9 @@
 Coach::Application.routes.draw do
 
-  devise_for :users
+  #devise_for :users
+
+  #devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :donates
   resources :users 
@@ -12,13 +15,11 @@ Coach::Application.routes.draw do
   resources :sites, :except => [:index, :show]
   resources :messages, :except => [:create, :new]
   
-  get '/login', :to => 'messages#new', :as => :login
-  match '/auth/:provider/callback', :to => 'messages#create'
-  match '/auth/failure', :to => 'messages#failure'
-  
-  
-  
-  get '/logout', :to => 'messages#destroy'
+  #For Pure Omniauth Solution w/o Devise
+  # get '/login', :to => 'messages#new', :as => :login
+  # match '/auth/:provider/callback', :to => 'messages#create'
+  # match '/auth/failure', :to => 'messages#failure' 
+  # get '/logout', :to => 'messages#destroy'
   
   # get "/portfolio", to: "sites#portfolio", as: :portfolio_page
   # get "/contact", to: "sites#contact", as: :contact_page
