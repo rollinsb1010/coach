@@ -23,7 +23,8 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [ :email ]
+  # Note: activated in Railscast for Twitter -- Otherwise leave commented? as Email by default
+   config.authentication_keys = [ :email ]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -221,6 +222,9 @@ Devise.setup do |config|
   require "omniauth-facebook"
   config.omniauth :facebook, '106984622805054', '0a7037f44ed1f43fe8b2b82e0cd39c25', :strategy_class => OmniAuth::Strategies::Facebook, 
   :client_options => {:ssl => {:ca_path => "/Users/rollinsb/.rvm/usr/ssl" }} 
+  
+  # !!!NEED SSL snippet to avoid SSL error in Rails 3.2!!!
+  
   # default settings for SSL conflict https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
   # :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}
   # Heroku Options
