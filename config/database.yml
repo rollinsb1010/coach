@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: coach_development
+  database: coach_developmentl
   encoding: unicode
   login:  
   password:

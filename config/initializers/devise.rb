@@ -215,10 +215,11 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   #config.omniauth :twitter, 'SQFmKa8zQ2mz2wVEcCoUg', 'mfd2PnT8dgcBRxCQaXOH6ipo4ehAl1B4tyhmY2F7U', :scope => 'messages/new'
-  require "omniauth-facebook"
-  config.omniauth :facebook, '106984622805054', '0a7037f44ed1f43fe8b2b82e0cd39c25', :strategy_class => OmniAuth::Strategies::Facebook,
+  
   # scope grants permissions to app specs, i.e. email, opengraph, friends, etc... https://developers.facebook.com/docs/reference/login/#permissions
   #:scope => 'messages/new',
+  require "omniauth-facebook"
+  config.omniauth :facebook, '106984622805054', '0a7037f44ed1f43fe8b2b82e0cd39c25', :strategy_class => OmniAuth::Strategies::Facebook, 
   :client_options => {:ssl => {:ca_path => "/Users/rollinsb/.rvm/usr/ssl" }} 
   # default settings for SSL conflict https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
   # :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}
