@@ -6,9 +6,9 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'devise'
 gem 'carrierwave'
 gem 'formtastic'
+gem 'simple_form'
 
 group :development do
   gem 'better_errors'
@@ -34,11 +34,12 @@ end
 gem 'jquery-rails'
 gem 'private_pub'
 gem 'thin'
-gem 'omniauth'
-gem 'omniauth-facebook'#, '1.4.0'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'#, '1.4.0'
+gem 'omniauth-identity'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

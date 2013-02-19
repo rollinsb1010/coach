@@ -1,11 +1,10 @@
 Coach::Application.routes.draw do
 
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  # devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  resources :donates
-  resources :users 
+ 
   
   SitesController.action_methods.each do |action|
     get "/#{action}", to: "sites##{action}", as: "#{action}_site"
@@ -13,6 +12,7 @@ Coach::Application.routes.draw do
   
   resources :sites, :except => [:index, :show]
   resources :messages, :except => [:create, :new]
+  resources :donates
   
   #For Pure Omniauth Solution w/o Devise
   # get '/login', :to => 'messages#new', :as => :login
@@ -23,9 +23,14 @@ Coach::Application.routes.draw do
   # get "/portfolio", to: "sites#portfolio", as: :portfolio_page
   # get "/contact", to: "sites#contact", as: :contact_page
   
+  match '/auth/:provider/callback', to: 'sessions#create' #omniauth route
+  match 'auth/failure', to: 'sessions#failure'
+  match '/logout', to: 'sessions#destroy', :as => 'logout'
+  resources :identities
+  resources :users
   
-  
-  root :to => 'users#index'
+  root :to => 'sessions#new'
+end  
 
 
   # The priority is based upon order of creation:
@@ -84,4 +89,4 @@ Coach::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end
+
