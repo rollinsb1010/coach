@@ -11,15 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130218214744) do
+ActiveRecord::Schema.define(:version => 20130222053630) do
+
+  create_table "destroys", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "identities", :force => true do |t|
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
     t.string   "name"
     t.integer  "user_id"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "uid"
+    t.string   "provider"
   end
 
   create_table "messages", :force => true do |t|
@@ -35,6 +44,17 @@ ActiveRecord::Schema.define(:version => 20130218214744) do
     t.string   "timestamps"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.string   "encrypted_password"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "username"
   end
 
 end

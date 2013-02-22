@@ -1,5 +1,8 @@
 Coach::Application.routes.draw do
 
+  resources :sessions
+
+
   # devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -23,13 +26,17 @@ Coach::Application.routes.draw do
   # get "/portfolio", to: "sites#portfolio", as: :portfolio_page
   # get "/contact", to: "sites#contact", as: :contact_page
   
-  match '/auth/:provider/callback', to: 'sessions#create' #omniauth route
-  match 'auth/failure', to: 'sessions#failure'
-  match '/logout', to: 'sessions#destroy', :as => 'logout'
-  resources :identities
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  
+  # match '/auth/:provider/callback', to: 'sessions#create' #omniauth route
+  # match 'auth/failure', to: 'sessions#failure'
+  # match '/logout', to: 'sessions#destroy', :as => 'logout'
+
   resources :users
   
-  root :to => 'sessions#new'
+  root :to => 'sites#about'
 end  
 
 
