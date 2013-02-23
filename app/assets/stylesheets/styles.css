@@ -254,6 +254,7 @@ h2 a, h3 a, h2 a:hover, h3 a:hover {
 	padding-top: 0px;
 	margin-bottom: 30px;
 	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+	background-color: #75B4C0;
 }
 
 .m-tb-50 {
@@ -380,6 +381,23 @@ h2 a, h3 a, h2 a:hover, h3 a:hover {
 #signup,
 #login{
 	padding-left:30px;
+}
+
+#coach_logo{
+	/*background-color:#75B4C0;*/
+	width:246px;
+	height:100px;
+	vertical-align:bottom;
+	padding-left:20px;
+}
+
+#coach_title{
+	width:275px;
+	height:20px;
+	color:#75B4C0;
+	text-align:left;
+	vertical-align:top;
+	padding-bottom:20px;
 }
 
 
