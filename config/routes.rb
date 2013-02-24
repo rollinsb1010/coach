@@ -1,6 +1,6 @@
 Coach::Application.routes.draw do
 
-  resources :sessions
+
 
 
   # devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
@@ -15,7 +15,7 @@ Coach::Application.routes.draw do
   
   resources :sites, :except => [:index, :show]
   resources :messages, :except => [:create, :new]
-  resources :donates
+  resources :sessions
   
   #For Pure Omniauth Solution w/o Devise
   # get '/login', :to => 'messages#new', :as => :login

@@ -12,4 +12,8 @@ class SitesController < ApplicationController
     render
   end
   
+  def donate
+    render
+  end
+  
 end
